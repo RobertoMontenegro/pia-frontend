@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./../stylesheets/general_style.css">
+  <link rel="stylesheet" href="./../stylesheets/agendar_style.css">
+  <script src="./../scripts/general_script.js" async></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <title>Agenda tu cita</title>
+</head>
+<body>
+  <nav class="container">
+    <svg style="height: 40px; filter: invert(1);" class="mobile hamburguer" id="hamburguer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+    <div class="centrar-h">
+      <a href="./index.html">
+        <img src="./../imgs/psychology.png" alt="Logo" class="logo">
+      </a>
+      <a href="./index.html">
+        <h1>Psicolonline</h1>
+      </a>
+    </div>
+    <div class="centrar-h desktop">
+      <div class="nav-links centrar-v">
+        <a href="./index.html#seccion-especialidades">
+          Especialidades
+        </a>
+      </div>
+      <div class="nav-links centrar-v">
+        <a href="./index.html#seccion-terapia">
+          Terapia
+        </a>
+      </div>
+      <div class="nav-links centrar-v">
+        <a href="./experiencia.html">
+          Experiencia
+        </a> 
+      </div>
+      <a href="./iniciar-sesion.html">
+        <button class="nav-btn" id="iniciar_sesion">
+          Iniciar sesión
+        </button>
+      </a>
+      <a href="./agendar.html">
+        <button class="nav-btn">
+          Agendar cita
+        </button>
+      </a>
+    </div>
+  </nav>
+
+  <div class="menu mobile centrar-h centrar-v" id="menu" hidden>
+    <ul>
+      <li><a href="./index.html#seccion-especialidades">Especialidad</a></li>
+      <li><a href="./index.html#seccion-terapia">Terapia</a></li>
+      <li><a href="./experiencia.html">Experiencia</a></li>
+      <li><a href="./iniciar-sesion.html">Iniciar sesión</a></li>
+      <li><a href="./agendar.html">Agendar cita</a></li>
+    </ul>
+  </div>
+
+  <div id="log_box" hidden><h4 id="log_msg"></h4></div>
+
+  <div class="content" id="agendar">
+    <h1>Agenda tu cita en línea</h1>
+    <label for="motivo">Escribe el motivo de la cita</label>
+    <textarea name="motivo" id="motivo" cols="30" rows="10" placeholder="Recuerda que ningún motivo es demasiado pequeño para pedir ayuda "></textarea>
+    <label for="fecha">Ingresa la fecha</label>
+    <select id="fecha">
+      <option value="6-junio" selected>Hoy - 6 de junio</option>
+      <option value="7-junio">Mañana - 7 de junio</option>
+      <option value="8-junio">Miércoles - 8 de junio</option>
+      <option value="9-junio">Jueves - 9 de junio</option>
+      <option value="10-junio">Viernes - 10 de junio</option>
+      <option value="13-junio">Lunes - 13 de junio</option>
+      <option value="14-junio">Martes - 14 de junio</option>
+      <option value="15-junio">Miércoles - 15 de junio</option>
+      <option value="16-junio">Jueves - 16 de junio</option>
+      <option value="17-junio">Viernes - 17 de junio</option>
+    </select>
+    <label for="hora">Ingresa una hora disponible</label>
+    <select id="hora">
+      <option value="">9:00 am</option>
+      <option value="">10:00 am</option>
+      <option value="">11:00 am</option>
+      <option value="">12:00 am</option>
+      <option value="">1:00 pm</option>
+      <option value="">2:00 pm</option>
+      <option value="">3:00 pm</option>
+      <option value="">4:00 pm</option>
+      <option value="">5:00 pm</option>
+    </select>
+    <input type="button" value="Confirmar cita" onclick="aHome()">
+  </div>
+
+
+</body>
+</html>

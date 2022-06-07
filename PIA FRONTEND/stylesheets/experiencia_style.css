@@ -1,0 +1,110 @@
+@import url('./colors.css');
+
+.content {
+  width: 100%;
+  height: fit-content;
+  padding: 3vw 10vw;
+  color: var(--azul_fuerte);
+}
+
+#seccion-info-personal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  color: var(--azul_fuerte);
+}
+
+#seccion-info-personal * {
+  margin: 0;
+}
+
+#seccion-info-personal > img {
+  justify-content: center;
+  width:300px;
+  height: 300px;
+}
+
+#seccion-info-personal .info-texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#seccion-info-personal .info-texto > *
+{
+  margin: 2vh;
+  max-width: 70vw;
+}
+
+#seccion-info-personal .info-texto h1 {
+  font-size: 2.5rem;
+}
+
+#seccion-info-personal .info-texto h3 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.info-contacto {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.info-contacto button {
+  min-width: 150px;
+  height: 40px;
+  font-weight: 300;
+  background-color: var(--amarillo_medio);
+  border: none;
+  border-radius: 30px;
+  font-size: medium;
+  filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.25));
+}
+
+.info-contacto button:hover {
+  opacity: 80%;
+}
+
+.info-contacto p {
+  font-size: large;
+  font-weight: 300;
+  padding-left: 1.5vw;
+  padding-top: 0.5vh;
+}
+
+
+#seccion-experiencia {
+  color: var(--azul_fuerte);
+  padding-top: 0;
+  padding-bottom: 6vh;
+}
+
+#seccion-experiencia h1 {
+  font-size: xx-large;
+}
+
+#seccion-experiencia h3 {
+  font-size: x-large;
+}
+
+#seccion-experiencia p,
+#seccion-experiencia li
+ {
+  font-size: larger;
+  font-weight: 300;
+}
+
+#seccion-experiencia ul {
+  list-style: square;
+}
+
+
+@media screen and (max-width: 585px) {
+  
+  .info-contacto p {
+    padding-top: 2vh;
+  }
+}

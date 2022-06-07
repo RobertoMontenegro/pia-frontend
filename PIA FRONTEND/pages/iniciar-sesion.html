@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../stylesheets/general_style.css">
+    <link rel="stylesheet" href="./../stylesheets/inicio-sesion_style.css">
+    <script src="./../scripts/general_script.js" async></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <title>Inicio de sesión</title>
+</head>
+<body>
+  <nav class="container">
+    <svg style="height: 40px; filter: invert(1);" class="mobile hamburguer" id="hamburguer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+    <div class="centrar-h">
+      <a href="./index.html">
+        <img src="./../imgs/psychology.png" alt="Logo" class="logo">
+      </a>
+      <a href="./index.html">
+        <h1>Psicolonline</h1>
+      </a>
+    </div>
+    <div class="centrar-h desktop">
+      <div class="nav-links centrar-v">
+        <a href="./index.html#seccion-especialidades">
+          Especialidades
+        </a>
+      </div>
+      <div class="nav-links centrar-v">
+        <a href="./index.html#seccion-terapia">
+          Terapia
+        </a>
+      </div>
+      <div class="nav-links centrar-v">
+        <a href="./experiencia.html">
+          Experiencia
+        </a> 
+      </div>
+      <a href="./iniciar-sesion.html">
+        <button class="nav-btn" id="iniciar_sesion">
+          Iniciar sesión
+        </button>
+      </a>
+      <a href="./agendar.html">
+        <button class="nav-btn">
+          Agendar cita
+        </button>
+      </a>
+    </div>
+  </nav>
+
+
+  <div class="menu mobile centrar-h centrar-v" id="menu" hidden>
+    <ul>
+      <li><a href="./index.html#seccion-especialidades">Especialidad</a></li>
+      <li><a href="./index.html#seccion-terapia">Terapia</a></li>
+      <li><a href="./experiencia.html">Experiencia</a></li>
+      <li><a href="./iniciar-sesion.html">Iniciar sesión</a></li>
+      <li><a href="./agendar.html">Agendar cita</a></li>
+    </ul>
+  </div>
+
+  <div id="log_box" hidden><h4 id="log_msg"></h4></div>
+
+  <div class="content" id="inicio-sesion">
+    <h1>Iniciar sesión</h1>
+    <input type="text" placeholder="Correo electrónico" id="correo" autofocus>
+    <input type="password" placeholder="Contraseña" id="password">
+    <input type="button" value="Ingresar" onclick="login()">
+    <p>¿No tienes cuenta? <a href="./registro.html">Quiero registrarme</a></p>
+  </div>
+
+
+
+  <footer>
+    <div class="semifooter centrar-v">
+      <div class="contacto">
+        <h3>Contáctanos</h3>
+        <p>Llama al 811 536 1543</p>
+        <p>Envía correo a info@psicolonline.com</p>
+      </div>
+    </div>
+
+    <div class="footer container centrar-v">
+      <div class="centrar-h">
+        <a href="https://www.facebook.com">
+          <div class="footer-link centrar-v" id="facebook">
+            <svg class="red-social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+          </div>
+        </a>
+        <a href="https://www.instagram.com">
+          <div class="footer-link centrar-v" id="instagram">
+            <svg class="red-social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+          </div>
+        </a>
+        <a href="https://www.tiktok.com">
+          <div class="footer-link centrar-v" id="tiktok">
+            <svg class="red-social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/></svg>
+          </div>
+        </a>
+      </div>
+    </div>
+  </footer>
+    
+</body>
+</html>

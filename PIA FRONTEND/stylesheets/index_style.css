@@ -1,0 +1,160 @@
+@import url('./colors.css');
+
+.content {
+  width: 100%;
+  height: fit-content;
+  padding: 3vw 10vw;
+  color: var(--azul_fuerte);
+      
+}
+
+.content > * {
+  margin: 0;
+  margin-top: 4vh;
+}
+
+.content > a >* {
+  margin: 0;
+  margin-top: 4vh;
+}
+
+.content > p {
+  max-width: 50vw;
+  font-size: large;
+  margin-bottom: 0;
+}
+
+#seccion-ayuda {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#seccion-ayuda p{
+  max-width: 45vw;
+
+}
+
+#seccion-ayuda  button {
+  width: 150px;
+  height: 40px;
+  margin-bottom: 4vh;
+  background-color: var(--amarillo_medio);
+  border: none;
+  border-radius: 30px;
+  font-size: medium;
+  filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.25));
+  transition: width 1s;
+}
+
+#seccion-ayuda  button:hover {
+  opacity: 80%;
+  width: 250px;
+}
+
+#seccion-ayuda>img {
+  width: 30vw;
+}
+
+
+#seccion-especialidades {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: var(--rosa_muy_palido);
+}
+
+.especialidades-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.especialidad {
+  justify-content: center;
+  text-align: center;
+  margin: 3vw 1.5vw;
+}
+
+.especialidad > img {
+  max-width: 200px;
+}
+
+.especialidad > img:hover {
+  max-width: 200px;
+}
+
+
+.especialidad > p {
+  max-width: 300px;
+}
+
+#seccion-terapia {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: var(--verde_medio);
+  color: #fff;
+}
+
+#seccion-terapia p{
+  max-width: 40vw;
+}
+
+#seccion-terapia  ul {
+  margin-bottom: 3vh;
+  transition: font-size 4s ease-in;
+}
+
+#seccion-terapia  ul :hover {
+  font-size: larger;
+}
+
+#seccion-terapia img {
+  filter: grayscale(100%);
+  width: 25vw;
+  transition: filter 1s;
+}
+#seccion-terapia img:hover {
+  filter: grayscale(0%);
+}
+
+#seccion-cita-gratis {
+  background-color: var(--azul_palido);
+}
+
+#seccion-cita-gratis > * {
+  margin-top: 2vh;
+  color: #fff;
+}
+
+#seccion-cita-gratis button{
+  width: 150px;
+  height: 40px;
+  margin-bottom: 4vh;
+  margin-top: 2vh;
+  color: #fff;
+  background-color: var(--rosa_palido);
+  border: none;
+  border-radius: 30px;
+  font-size: medium;
+  filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.25));
+  transition: width 1s;
+}
+
+#seccion-cita-gratis button:hover {
+  width: 250px;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+  #seccion-ayuda>img {
+    display: none;
+  }
+  #seccion-terapia img {
+    display: none;
+  } 
+}
+
+

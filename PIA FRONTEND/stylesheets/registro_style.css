@@ -1,0 +1,66 @@
+@import url("./colors.css");
+
+
+.content {
+    width: 100%;
+    height: fit-content;
+    padding: 3vh 15vw;
+    color: var(--azul_fuerte);
+  }
+  
+  footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  #registrar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #registrar h1{
+    margin: 4vh 0;
+    justify-self: center;
+  }
+  
+  input[type=button]{
+    background-color: var(--azul_medio);
+    color: var(--azul_muy_palido); 
+    padding-left: 0px;
+    font-weight: 700;
+  }
+  
+  input[type=button]:hover {
+    opacity: 90%;
+  }
+  
+  input[type=text]{
+    padding-left: 20px;
+  }
+  
+  
+  input[type=password]{
+    padding-left: 20px;
+  }
+  
+  #registrar input{
+    margin-bottom: 4vh;
+    height: 50px;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 15px;
+    font-size: medium;
+    filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.25));
+  }
+  
+  #registrar p {
+    align-self: center;
+  }
+  
+  #registrar a {
+    color: var(--azul_medio);
+    text-decoration: underline;
+  }

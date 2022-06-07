@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+@import url('./colors.css');
+
+
+* {
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif, Arial;
+}
+
+:root {
+  --azul_fuerte: #233251;
+  --azul_medio: #3159BE;
+  --azul_muy_palido: #C1E3FF;
+  --amarillo_medio: #FFD44D;
+  --aqua_medio: #68DCCF;
+  --gris_medio: #354043;
+  --gris_fuerte: #21292B;
+}
+
+
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  padding-bottom: 210px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  background-color: var(--azul_medio);
+  color: var(--azul_muy_palido);
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+
+
+.menu {
+  display: none;
+  width: 100%;
+  background-color: #f1f2f3;
+}
+
+.menu > ul {
+  display: block;
+  list-style: none;
+  padding: 0;
+}
+
+.menu > ul > li{
+  padding: 10px;
+  text-align: center;
+  color: var(--gris_medio);
+}
+
+.menu > ul > li:hover{
+  text-decoration: underline;
+  color: #000000;
+}
+
+button {
+  transition: filter 100ms ease-in;
+}
+
+button:hover {
+  filter: drop-shadow(6px 6px 0px rgba(0, 0, 0, 0.50));
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  align-items: center;
+}
+
+.container {
+  padding: 0 10vw;
+}
+
+.centrar-h {
+  display: flex;
+  align-content: space-around;
+  flex-direction: row;
+  align-items: center;
+flex-wrap: wrap;justify-content: space-between;}
+
+.centrar-v {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links {
+  padding: 0 0.5vw;
+  height: 100px;
+  margin-left: 0.5vw;
+  font-weight: 600;
+}
+
+.nav-links:hover {
+  background-color: #2b4ea8;
+  
+  color: #ffffff;
+}
+
+.nav-btn {
+  width: 150px;
+  height: 40px;
+  margin-left: 1.5vw;
+  background-color: var(--amarillo_medio);
+  border: none;
+  border-radius: 30px;
+  font-size: medium;
+  font-weight: 300;
+  color: var(--azul_fuerte);
+  font-weight: 400;
+  filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.25));
+
+}
+
+.nav-btn:hover {
+  opacity: 90%;
+  color: var(--azul_fuerte);
+}
+
+
+.semifooter {
+  height: 140px;
+  bottom: 0;
+  background-color: var(--gris_medio);
+  color: var(--azul_muy_palido);
+}
+
+.footer {
+  display: flex;
+  background-color: var(--gris_fuerte);
+  height: 70px;
+}
+
+.footer-link {
+  justify-content: center;
+  height: 70px;
+  width: 70px;
+  margin: 0 10px;
+  
+}
+.red-social-icon {
+  height: 30px;
+  filter: invert(1);
+  
+}
+
+
+.logo {
+  height: 50px;
+  margin-right: 1vw;
+  filter: drop-shadow(-1px 2px 0px rgba(0, 0, 0, 0.35));
+  transition: transform 2s ease-out;
+}
+
+.logo:hover {
+  transform: rotate(360deg);
+} 
+
+.hamburguer {
+  position: absolute;
+  height: 300px;
+  top: 15px;
+  left: 20px;
+  transition: transform 2s;
+}
+
+#iniciar_sesion {
+  background-color: var(--aqua_medio);
+}
+
+#facebook:hover {
+  background-color: #2E89FF;
+  
+}
+
+#instagram:hover {
+  background-color: #FF0075;
+}
+
+#tiktok:hover {
+  background-color: #000000;
+}
+
+
+
+[hidden] {
+  display: none;
+}
+
+#log_box {
+  position: absolute;
+  top: 90px;
+  right: 15px;
+  border-radius: 10px;
+  background-color: var(--azul_medio);
+  padding: 0 1vw;
+}
+
+#log_msg {
+  color: var(--azul_muy_palido);
+  margin: 0.5vh 0;
+}
+
+.shake {
+  animation: shake-animation 5s ease infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes shake-animation {
+  0% { transform:translate(0,0) }
+ 1.78571% { transform:translate(5px,0) }
+ 3.57143% { transform:translate(0,0) }
+ 5.35714% { transform:translate(5px,0) }
+ 7.14286% { transform:translate(0,0) }
+ 8.92857% { transform:translate(5px,0) }
+ 10.71429% { transform:translate(0,0) }
+ 100% { transform:translate(0,0) }
+}
+
+@media screen and (max-width: 1080px) {
+  .desktop {
+    display: none;
+  }
+
+  nav {
+    justify-content: center;
+    height: 70px;
+  }  
+  #log_box {
+    position: absolute;
+    top: 60px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .mobile {
+    display: none;
+  }
+
+
+}
